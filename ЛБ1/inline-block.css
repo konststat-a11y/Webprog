@@ -1,0 +1,6 @@
+/* Нульовий розмір шрифту прибирає пробіл між inline-block колонками. */
+.inline-layout { font-size: 0; }
+.inline-layout > .sidebar, .inline-layout > .right-column { display: inline-block; vertical-align: top; font-size: 16px; }
+.inline-layout > .sidebar { width: 20%; }
+.inline-layout > .right-column { width: 58%; margin-left: 10%; border-left: 1px solid #111; border-right: 1px solid #111; }
+@media (max-width: 650px) { .inline-layout > .sidebar { font-size: 14px; } }

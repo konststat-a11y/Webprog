@@ -1,0 +1,9 @@
+/* Таблиця: ліва колонка та проміжки об'єднані на три рядки. */
+.table-layout { border-collapse: collapse; table-layout: fixed; }
+.table-layout td { padding: 0; vertical-align: top; }
+.table-layout .side-col { width: 20%; }
+.table-layout .gap-col { width: 10%; }
+.table-layout .main-col { width: 58%; }
+.table-layout .end-col { width: 12%; }
+.table-layout .main-cell { border-left: 1px solid #111; border-right: 1px solid #111; }
+.table-layout .content-row { height: 100%; }

@@ -1,0 +1,8 @@
+[
+  {"id": 1, "name": "Консультація кардіолога", "category": "cardiology", "price": 950, "doctorIds": [1]},
+  {"id": 2, "name": "ЕКГ з описом", "category": "cardiology", "price": 450, "doctorIds": [1]},
+  {"id": 3, "name": "Консультація сімейного лікаря", "category": "family", "price": 800, "doctorIds": [2]},
+  {"id": 4, "name": "УЗД-обстеження", "category": "ultrasound", "price": 1100, "doctorIds": [2]},
+  {"id": 5, "name": "Консультація педіатра", "category": "pediatrics", "price": 850, "doctorIds": [3]},
+  {"id": 6, "name": "Профілактичний огляд", "category": "prevention", "price": 700, "doctorIds": [2, 3]}
+]

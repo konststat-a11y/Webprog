@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Лінія — навчальний сайт приватного медичного центру. Напрямки, команда лікарів і демонстраційна форма запису.">
+  <meta name="theme-color" content="#1558d6">
+  <title>Лінія — інтерактивна клініка — ЛБ4</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="vendor/bootstrap.bundle.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Власний SVG-набір іконок: не потребує завантаження шрифтів. -->
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="m5 3 4 1 1 5-3 2a15 15 0 0 0 6 6l2-3 5 1 1 4c-1 4-7 2-11-1S1 7 5 3Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20 5c-3-3-6-1-8 1-2-2-5-4-8-1s-1 7 8 14c9-7 11-11 8-14Z"/><path d="M3 11h5l2-3 3 7 2-4h6"/></symbol>
+    <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2M12 14v7M8 18h8"/></symbol>
+    <symbol id="i-child" viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><path d="m4 11 8 2 8-2M12 8v10m0 0-5 4m5-4 5 4"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M5 12h3l2-5 4 10 2-5h3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 8 3v6c0 5-4 8-8 11-4-3-8-6-8-11V5Z"/><path d="m8 11 3 3 5-5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-location" viewBox="0 0 24 24"><path d="M19 10c0 6-7 12-7 12S5 16 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></symbol>
+    <symbol id="i-document" viewBox="0 0 24 24"><path d="M14 2H4v20h16V8Zm0 0v6h6M8 12h8M8 16h8"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Перейти до вмісту</a>
+  <div class="demo-bar">Навчальний проєкт · Лабораторна робота №4 · Варіант 9</div>
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Головна навігація">
+      <div class="container">
+        <a class="navbar-brand brand" href="#home" aria-label="Лінія — на головну">
+          <span class="brand-symbol"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></span>
+          <span>лінія<span class="brand-caption">медичний центр</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Відкрити меню"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="navbar-nav mx-auto gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="#about">Про клініку</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Напрямки</a></li>
+            <li class="nav-item"><a class="nav-link" href="#doctors">Лікарі</a></li>
+            <li class="nav-item"><a class="nav-link" href="#calculator">Вартість</a></li>
+          </ul>
+          <a class="nav-phone" href="tel:+380440000000"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span>+38 (044) 000-00-00<small>демонстраційний номер</small></span></a>
+          <a class="btn btn-primary nav-appointment" href="#appointment">Записатися</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 hero-copy">
+            <p class="eyebrow"><span class="short-line"></span>ПРИВАТНИЙ МЕДИЧНИЙ ЦЕНТР</p>
+            <h1 id="hero-title">Турбота про вас.<br><span>На кожному кроці.</span></h1>
+            <p class="hero-description">Коли вас чують, пояснюють і підтримують. Знайдіть свого лікаря та зробіть перший крок до уважного піклування про здоров’я.</p>
+            <div class="d-flex flex-wrap gap-3 hero-actions">
+              <a class="btn btn-primary btn-lg" href="#appointment">Записатися на прийом</a>
+              <a class="btn btn-outline-primary btn-lg" href="#doctors">Обрати лікаря</a>
+            </div>
+            <div class="hero-assurance"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span>Зрозумілий план. Уважне ставлення. Спільні рішення.</span></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-visual">
+              <img class="hero-photo" src="assets/clinic.jpg" width="1400" height="933" alt="Лікар зі стетоскопом користується цифровими інструментами" fetchpriority="high">
+              <div class="photo-caption"><span class="caption-icon"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span><span><strong>Медицина з людським обличчям</strong><small>Час для розмови та ваших запитань</small></span></div>
+              <span class="visual-cross" aria-hidden="true">+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="care-strip" aria-label="Наш підхід">
+      <div class="container"><div class="row g-4">
+        <div class="col-md-4"><div class="care-item"><svg class="icon" aria-hidden="true"><use href="#i-person"/></svg><div><h2>Лікар поруч</h2><p>Від першого запитання до плану дій</p></div></div></div>
+        <div class="col-md-4"><div class="care-item"><svg class="icon" aria-hidden="true"><use href="#i-scan"/></svg><div><h2>Комплексний підхід</h2><p>Консультації та діагностика в одному місці</p></div></div></div>
+        <div class="col-md-4"><div class="care-item"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><div><h2>Повага до вашого часу</h2><p>Зручний вибір лікаря та дня візиту</p></div></div></div>
+      </div></div>
+    </section>
+
+    <section class="section-space" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">ДОПОМОГА, ЯКА ПОЧИНАЄТЬСЯ З УВАГИ</p><h2 id="services-title">Наші напрямки</h2></div><p>Для дорослих і дітей.<br>З фокусом на ваших потребах.</p></div>
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3"><article class="card service-card h-100"><div class="card-body"><span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-person"/></svg></span><h3 class="card-title">Сімейна медицина</h3><p class="card-text">Перший контакт, профілактичні огляди та супровід усієї родини.</p><a href="#appointment" class="service-link" data-service="family">Обрати консультацію<span class="visually-hidden"> із сімейної медицини</span></a></div></article></div>
+          <div class="col-sm-6 col-lg-3"><article class="card service-card h-100"><div class="card-body"><span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span><h3 class="card-title">Кардіологія</h3><p class="card-text">Консультації з питань здоров’я серця й індивідуальний план обстежень.</p><a href="#appointment" class="service-link" data-service="cardiology">Обрати консультацію<span class="visually-hidden"> кардіолога</span></a></div></article></div>
+          <div class="col-sm-6 col-lg-3"><article class="card service-card h-100"><div class="card-body"><span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-child"/></svg></span><h3 class="card-title">Педіатрія</h3><p class="card-text">Уважні огляди дітей та відповіді на щоденні запитання батьків.</p><a href="#appointment" class="service-link" data-service="pediatrics">Обрати консультацію<span class="visually-hidden"> педіатра</span></a></div></article></div>
+          <div class="col-sm-6 col-lg-3"><article class="card service-card h-100"><div class="card-body"><span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-scan"/></svg></span><h3 class="card-title">УЗД-діагностика</h3><p class="card-text">Ультразвукові обстеження за направленням та пояснення результатів.</p><a href="#appointment" class="service-link" data-service="ultrasound">Обрати обстеження</a></div></article></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section section-space" id="about" aria-labelledby="about-title">
+      <div class="container"><div class="row g-5 align-items-center">
+        <div class="col-lg-5"><p class="eyebrow">НАША ФІЛОСОФІЯ</p><h2 id="about-title">Більше уваги.<br>Більше розуміння.</h2></div>
+        <div class="col-lg-7"><p class="about-lead">Ми уявляємо клініку як місце, де можна спокійно розповісти про те, що турбує, і зрозуміти наступні кроки.</p><div class="row g-3"><div class="col-sm-6"><p class="check-line"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Пояснення простою мовою</p></div><div class="col-sm-6"><p class="check-line"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Увага до кожного запитання</p></div><div class="col-sm-6"><p class="check-line"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Індивідуальний план візиту</p></div><div class="col-sm-6"><p class="check-line"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Повага до приватності</p></div></div></div>
+      </div></div>
+    </section>
+
+    <section class="section-space" id="doctors" aria-labelledby="doctors-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">ЗНАЙОМСТВО ДО ПЕРШОГО ВІЗИТУ</p><h2 id="doctors-title">Каталог лікарів</h2></div><p>Оберіть спеціальність.<br>Дізнайтеся більше про свого лікаря.</p></div>
+        <div id="data-status" class="alert alert-info" role="status" aria-live="polite">Завантажуємо лікарів і послуги…</div>
+        <button id="retry-load" type="button" class="btn btn-outline-primary mb-4" hidden>Спробувати ще раз</button>
+        <div class="catalog-toolbar"><div><label class="form-label" for="specialty-filter">Спеціальність</label><select id="specialty-filter" class="form-select" disabled><option value="">Усі спеціальності</option></select></div><p id="catalog-count" class="mb-0" role="status" aria-live="polite"></p></div>
+        <div class="row g-4" id="doctors-list" aria-busy="true"></div>
+        <p class="section-note">Профілі, досвід і розклад — навчальні дані. Фотографії ілюстративні.</p>
+      </div>
+    </section>
+
+    <section class="appointment-section section-space" id="appointment" aria-labelledby="appointment-title">
+      <div class="container"><div class="row g-5 align-items-start">
+        <div class="col-lg-5 appointment-copy"><p class="eyebrow">ВАШ ВІЗИТ, КРОК ЗА КРОКОМ</p><h2 id="appointment-title">Знайдіть час<br>для свого здоров’я</h2><p>Оберіть лікаря, послугу, дату та доступний час із його розкладу. Після перевірки даних підтвердьте навчальний запис.</p><div class="appointment-note"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><p>Демонстрація: контакти не надсилаються. Браузер запам’ятовує лише лікаря, дату й зайнятий час. Спільного розкладу реальної клініки немає.</p></div><button id="clear-bookings" class="btn btn-outline-light mt-4" type="button">Очистити тестові записи</button><p id="storage-status" class="small mt-3" role="status"></p></div>
+        <div class="col-lg-7"><div class="booking-panel">
+          <h3>Запис на прийом</h3><p class="form-intro">Поля зі знаком * обов’язкові. Використовуйте вигадані контакти.</p>
+          <form id="appointment-form" novalidate>
+            <fieldset id="booking-fields" disabled>
+              <legend class="visually-hidden">Дані запису на прийом</legend>
+              <div class="row g-3">
+                <div class="col-sm-6"><label class="form-label" for="doctor">Лікар *</label><select id="doctor" name="doctor_id" class="form-select" required><option value="">Оберіть лікаря</option></select><div class="invalid-feedback" id="doctor-error"></div></div>
+                <div class="col-sm-6"><label class="form-label" for="service">Послуга *</label><select id="service" name="service_id" class="form-select" required><option value="">Спочатку оберіть лікаря</option></select><div class="invalid-feedback" id="service-error"></div></div>
+                <div class="col-sm-6"><label class="form-label" for="visit-date">Дата візиту *</label><input id="visit-date" name="visit_date" type="date" class="form-control" required><div class="invalid-feedback" id="visit-date-error"></div></div>
+                <div class="col-sm-6"><label class="form-label" for="visit-time">Вільний час *</label><select id="visit-time" name="visit_time" class="form-select" required><option value="">Оберіть лікаря та дату</option></select><div class="invalid-feedback" id="visit-time-error"></div></div>
+                <div class="col-12"><p id="schedule-status" class="form-text mt-0 mb-0" role="status" aria-live="polite">Вільні години з’являться після вибору лікаря та дати.</p></div>
+                <div class="col-12"><label class="form-label" for="patient-name">Прізвище, ім’я, по батькові *</label><input id="patient-name" name="patient_name" type="text" class="form-control" autocomplete="name" maxlength="120" placeholder="Шевченко Олександр Іванович" required><div class="invalid-feedback" id="patient-name-error"></div></div>
+                <div class="col-sm-6"><label class="form-label" for="patient-phone">Телефон *</label><input id="patient-phone" name="patient_phone" type="tel" class="form-control" autocomplete="tel" placeholder="+380671234567" pattern="\+380[0-9]{9}" maxlength="13" required><div class="invalid-feedback" id="patient-phone-error"></div></div>
+                <div class="col-sm-6"><label class="form-label" for="patient-email">E-mail (необов’язково)</label><input id="patient-email" name="patient_email" type="email" class="form-control" autocomplete="email" maxlength="150" placeholder="name@example.com"><div class="invalid-feedback" id="patient-email-error"></div></div>
+                <div class="col-12"><div class="form-check"><input id="demo-consent" name="demo_consent" type="checkbox" class="form-check-input" required><label class="form-check-label" for="demo-consent">Розумію, що це навчальний запис *</label><div class="invalid-feedback" id="demo-consent-error"></div></div></div>
+                <div class="col-12"><button class="btn btn-primary w-100" type="submit">Переглянути й підтвердити</button></div>
+              </div>
+            </fieldset>
+            <noscript><p class="text-danger mt-3">Для завантаження JSON і роботи форми потрібен JavaScript.</p></noscript>
+          </form>
+          <div id="booking-result" class="alert alert-success mt-4 mb-0" role="status" aria-live="polite" hidden></div>
+        </div></div>
+      </div></div>
+    </section>
+
+
+    <section id="calculator" class="section-space calculator-section" aria-labelledby="calculator-title">
+      <div class="container"><div class="section-heading"><div><p class="eyebrow">ПЛАНУЙТЕ ЗАВЧАСНО</p><h2 id="calculator-title">Калькулятор послуг</h2></div><p>Оберіть потрібні послуги.<br>Вартість оновиться одразу.</p></div>
+        <div class="row g-4 calculator-screen"><div class="col-lg-8"><div id="calculator-services" class="calculator-options" aria-busy="true"></div></div><div class="col-lg-4"><aside class="total-panel"><p>Орієнтовна загальна вартість</p><p id="calculator-total" class="total-value" role="status" aria-live="polite">0 грн</p><p id="calculator-count">Обрано послуг: 0</p><button id="print-calculation" class="btn btn-primary w-100" type="button" disabled>Друкувати розрахунок</button><button id="clear-calculation" class="btn btn-link w-100 mt-2" type="button" disabled>Скинути вибір</button><p class="small mb-0 mt-3">Навчальні ціни. Розрахунок не є рахунком або замовленням.</p></aside></div></div>
+        <div id="print-summary" class="print-summary"><h3>Обрані послуги</h3><div id="print-items"></div><p id="print-total"></p><p>Навчальний розрахунок клініки «Лінія». Ціни умовні.</p></div>
+      </div>
+    </section>
+
+    <section id="consultant" class="section-space consultant-section" aria-labelledby="consultant-title">
+      <div class="container"><div class="row g-5 align-items-start"><div class="col-lg-5"><p class="eyebrow">ДОПОМОЖЕМО ЗОРІЄНТУВАТИСЯ</p><h2 id="consultant-title">З якого лікаря<br>почати?</h2><p class="mt-4">Оберіть тему звернення. Консультант підкаже напрямок і допоможе перейти до запису.</p><p class="section-note">Базовий сценарний бот: навігація за темою, без діагнозів і призначень.</p></div><div class="col-lg-7"><div class="chat-panel"><div class="chat-header"><span class="brand-symbol"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></span><div><strong>Консультант Лінії</strong><small>Автоматичний помічник</small></div></div><div id="chat-log" class="chat-log" role="log" aria-label="Діалог із консультантом" aria-live="polite"><p class="chat-bubble">Вітаю! З якого питання ви хотіли б звернутися?</p></div><form id="chat-form"><label class="form-label" for="chat-topic">Тема звернення</label><select id="chat-topic" class="form-select" required disabled><option value="">Оберіть тему</option><option value="cardiology">Питання щодо здоров’я серця</option><option value="family">Плановий огляд дорослого</option><option value="pediatrics">Плановий огляд дитини</option><option value="ultrasound">Направлення на УЗД</option></select><button id="chat-send" class="btn btn-primary mt-3" type="submit" disabled>Отримати рекомендацію</button></form><button id="chat-book" class="btn btn-outline-primary mt-3 w-100" type="button" hidden>Перейти до запису</button></div></div></div></div>
+    </section>
+
+    <section class="section-space credentials-section" id="credentials" aria-labelledby="credentials-title">
+      <div class="container"><div class="section-heading"><div><p class="eyebrow">ВІДКРИТІСТЬ І ВІДПОВІДАЛЬНІСТЬ</p><h2 id="credentials-title">Довіра починається з прозорості</h2></div><p>Ліцензії та сертифікати<br>мають бути доступні пацієнтам.</p></div>
+        <div class="row g-4">
+          <div class="col-md-4"><article class="credential-card h-100"><svg class="icon" aria-hidden="true"><use href="#i-document"/></svg><p class="document-label">ЛІЦЕНЗІЯ</p><h3>Медична практика</h3><p>Місце для офіційної ліцензії та реквізитів медичного закладу.</p><span class="sample-tag">Навчальний зразок</span></article></div>
+          <div class="col-md-4"><article class="credential-card h-100"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><p class="document-label">СЕРТИФІКАТИ</p><h3>Кваліфікація команди</h3><p>Місце для сертифікатів спеціалістів і документів про навчання.</p><span class="sample-tag">Навчальний зразок</span></article></div>
+          <div class="col-md-4"><article class="credential-card h-100"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><p class="document-label">СТАНДАРТИ</p><h3>Якість і безпека</h3><p>Місце для підтверджених документів про організацію медичної допомоги.</p><span class="sample-tag">Навчальний зразок</span></article></div>
+        </div>
+        <p class="section-note">Документи не є справжніми ліцензіями чи підтвердженням акредитації. Офіційні реквізити не вигадувалися.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="container"><div class="row g-5">
+      <div class="col-lg-4"><a class="brand footer-brand" href="#home"><span class="brand-symbol"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></span><span>лінія<span class="brand-caption">медичний центр</span></span></a><p class="footer-description">Увага до людини.<br>Турбота, яку ви відчуваєте.</p></div>
+      <div class="col-sm-6 col-lg-3"><h2>Завітайте до нас</h2><p><svg class="icon" aria-hidden="true"><use href="#i-location"/></svg>Київ, вул. Прикладна, 12<br><span class="footer-detail">Умовна адреса для макета</span></p><a href="tel:+380440000000">+38 (044) 000-00-00</a><p class="footer-detail mt-2">Демонстраційний номер</p></div>
+      <div class="col-sm-6 col-lg-3"><h2>Графік роботи</h2><dl class="hours"><div><dt>Пн–Пт</dt><dd>08:00–20:00</dd></div><div><dt>Субота</dt><dd>09:00–16:00</dd></div><div><dt>Неділя</dt><dd>Вихідний</dd></div></dl></div>
+      <div class="col-lg-2"><h2>Навігація</h2><ul class="footer-links"><li><a href="#services">Напрямки</a></li><li><a href="#doctors">Наша команда</a></li><li><a href="#appointment">Запис на прийом</a></li></ul></div>
+    </div><div class="footer-bottom"><p>© 2026 Лінія. Навчальний проєкт, не реальна клініка.</p><p>HTML5 · CSS3 · Bootstrap 5.3</p></div></div>
+  </footer>
+
+  <div class="modal fade" id="doctor-modal" role="dialog" tabindex="-1" aria-labelledby="doctor-modal-title" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h2 class="modal-title fs-4" id="doctor-modal-title">Профіль лікаря</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити профіль"></button></div><div class="modal-body" id="doctor-modal-body"></div><div class="modal-footer"><button id="modal-book" type="button" class="btn btn-primary">Обрати цього лікаря</button></div></div></div></div>
+  <div class="modal fade" id="confirm-modal" role="dialog" tabindex="-1" aria-labelledby="confirm-title" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title fs-4" id="confirm-title">Перевірте дані запису</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити підтвердження"></button></div><div class="modal-body"><div id="confirmation-summary"></div><p class="small text-secondary mt-3 mb-0">Це локальний навчальний запис. Контакти не зберігаються і не надсилаються.</p><p id="confirmation-error" class="text-danger mt-3" role="alert" hidden></p></div><div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Редагувати</button><button id="confirm-booking" type="button" class="btn btn-primary">Підтвердити запис</button></div></div></div></div>
+</body>
+</html>

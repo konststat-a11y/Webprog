@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Навчальна робота: три способи верстки, зображення та HTML-форма.">
+  <title>Форма — Вебпрограмування</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="float.css">
+  <script src="form.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Перейти до вмісту</a>
+  <p class="page-caption">Практична робота · Форма</p>
+  <div class="frame float-layout">
+    <aside class="sidebar"><nav aria-label="Головне меню">
+        <span class="region-number" aria-hidden="true">2</span>
+        <h2>Меню сайту</h2>
+        <ul>
+          <li><a href="index.html">Таблична верстка</a></li>
+          <li><a href="float.html">Плаваючі блоки</a></li>
+          <li><a href="inline-block.html">Inline-блоки</a></li>
+          <li><a href="image.html">Малюнок</a></li>
+          <li><a href="form.html" aria-current="page">Форма</a></li>
+        </ul>
+      </nav></aside>
+    <div class="right-column">
+      <header class="header"><span class="region-number" aria-hidden="true">1</span><p>Форма</p></header>
+      <main id="content" class="content"><span class="region-number" aria-hidden="true">4</span>
+          <h1>Анкета користувача</h1>
+            <p>Поля із зірочкою (*) обов’язкові для заповнення.</p>
+            <form id="user-form" action="form.html" method="get" aria-describedby="form-note">
+              <div class="field">
+                <label for="user-name">Прізвище, ім’я, по батькові *</label>
+                <input id="user-name" name="user_name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="user-email">E-mail</label>
+                <input id="user-email" name="user_email" type="email" autocomplete="email">
+              </div>
+              <div class="field">
+                <label for="user-birthdate">Дата народження *</label>
+                <input id="user-birthdate" name="user_birthdate" type="date" autocomplete="bday" required>
+              </div>
+              <fieldset>
+                <legend>Стать *</legend>
+                <label class="radio-label" for="sex-male"><input id="sex-male" name="user_sex" type="radio" value="Чоловіча" required>Чоловіча</label>
+                <label class="radio-label" for="sex-female"><input id="sex-female" name="user_sex" type="radio" value="Жіноча" required>Жіноча</label>
+              </fieldset>
+              <button type="submit">Перевірити анкету</button>
+              <button type="reset">Очистити</button>
+              <p id="form-note" class="note">Навчальна форма: перевірка й показ даних відбуваються у вашому браузері, без збереження на сервері.</p>
+              <noscript><p>Для показу результату без перезавантаження сторінки ввімкніть JavaScript. Без нього форма передає параметри цій самій сторінці методом GET.</p></noscript>
+            </form>
+            <div id="form-result" role="status" aria-live="polite" hidden></div>
+        </main>
+      <footer class="footer"><span class="region-number" aria-hidden="true">3</span><p>Вебпрограмування · HTML та CSS</p><a href="#content">До початку тексту</a></footer>
+    </div>
+  </div>
+</body>
+</html>

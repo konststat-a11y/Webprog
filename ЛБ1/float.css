@@ -1,0 +1,5 @@
+/* Плаваючі колонки. Фон контейнера продовжує жовту смугу донизу. */
+.float-layout > .sidebar { float: left; width: 20%; }
+.float-layout > .right-column { float: left; width: 58%; margin-left: 10%; border-left: 1px solid #111; border-right: 1px solid #111; }
+/* Clearfix: контейнер враховує висоту плаваючих елементів. */
+.float-layout::after { content: ""; display: block; clear: both; }

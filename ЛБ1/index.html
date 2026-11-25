@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Навчальна робота: три способи верстки, зображення та HTML-форма.">
+  <title>Таблична верстка — Вебпрограмування</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="table.css">
+
+</head>
+<body>
+  <a class="skip-link" href="#content">Перейти до вмісту</a>
+  <p class="page-caption">Практична робота · Таблична верстка</p>
+  <!-- Таблиця використовується для розмітки за умовою завдання. -->
+  <table class="frame table-layout" role="presentation">
+    <colgroup><col class="side-col"><col class="gap-col"><col class="main-col"><col class="end-col"></colgroup>
+    <tbody>
+      <tr>
+        <td rowspan="3"><aside class="sidebar"><nav aria-label="Головне меню">
+        <span class="region-number" aria-hidden="true">2</span>
+        <h2>Меню сайту</h2>
+        <ul>
+          <li><a href="index.html" aria-current="page">Таблична верстка</a></li>
+          <li><a href="float.html">Плаваючі блоки</a></li>
+          <li><a href="inline-block.html">Inline-блоки</a></li>
+          <li><a href="image.html">Малюнок</a></li>
+          <li><a href="form.html">Форма</a></li>
+        </ul>
+      </nav></aside></td>
+        <td rowspan="3" aria-hidden="true"></td>
+        <td class="main-cell"><header class="header"><span class="region-number" aria-hidden="true">1</span><p>Таблична верстка</p></header></td>
+        <td rowspan="3" aria-hidden="true"></td>
+      </tr>
+      <tr class="content-row"><td class="main-cell"><main id="content" class="content"><span class="region-number" aria-hidden="true">4</span>
+          <article aria-labelledby="book-title">
+            <h1 id="book-title">Так казав Заратустра</h1>
+            <p class="author">Фрідріх Ніцше</p>
+            <h2>Частина перша</h2>
+            <h3>Переднє слово Заратустри</h3>
+            <blockquote cite="https://www.ukrlib.com.ua/world/printit.php?tid=3781">
+              <p>«О велике світило! Чи було б ти щасливе, якби не мало кому світити?»</p>
+            </blockquote>
+            <h3>Повернення до людей</h3>
+            <p>Після тривалого усамітнення в горах Заратустра вирішує повернутися до людей. Накопичена мудрість спонукає його залишити звичне життя й поділитися своїми думками з іншими.</p>
+            <p>Звернення до сонця відкриває цю подорож. Для героя важливо передавати те, що він набув, а не зберігати свої знання лише для себе.</p>
+            <h3>Зустріч у лісі</h3>
+            <p>Дорогою Заратустра зустрічає старого відлюдника. Вони по-різному ставляться до людського товариства: старий обирає самотність, тоді як мандрівник прагне повернутися до людей із дарунком.</p>
+            <h3>Промова на площі</h3>
+            <p>У місті герой намагається говорити з натовпом про розвиток людини та подолання власних меж. Однак слухачі чекають видовища й не поділяють його зацікавлення.</p>
+            <p>Образ переходу над прірвою підкреслює складність змін. Людське життя постає як рух, що потребує зусиль і готовності переосмислювати себе.</p>
+            <p class="source">Коротка цитата та стислий переказ початку твору. Повний український переклад: <a href="https://www.ukrlib.com.ua/world/printit.php?tid=3781">читати на УкрЛіб</a>.</p>
+          </article>
+        </main></td></tr>
+      <tr><td class="main-cell"><footer class="footer"><span class="region-number" aria-hidden="true">3</span><p>Вебпрограмування · HTML та CSS</p><a href="#content">До початку тексту</a></footer></td></tr>
+    </tbody>
+  </table>
+</body>
+</html>
